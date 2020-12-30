@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="sass/style.css">
+    <link rel="stylesheet" href="sass/design.css">
+</head>
+<body>
+<!--header-->
+    <header class="clear">
+        <div class="logo"><img src="images/LOGO/logo-beesbar-small.png" alt=""></div>
+        <nav class="p-t-1 p-b-1">
+            <ul>
+                <li><a href="#">最新消息</a></li>
+                <li><a href="#">品牌介紹</a></li>
+                <li><a href="#">美味餐點</a></li>
+                <li><a href="#">啤酒訂購</a></li>
+                <li><a href="#">首頁</a></li>
+            </ul>
+        </nav>
+        <div id="hamburger">
+            <div class="hamT bg-white"></div>
+            <div class="hamM bg-white"></div>
+            <div class="hamM bg-white"></div>
+            <div class="hamB bg-white"></div>
+        </div>
+    </header>
+
+<!--slide theme-->
+    <div id="theme">
+        <div id="slide" class="fade">
+            <img src="images/banner-bar.jpg">
+            <img src="images/banner-beer.jpg">
+            <img src="images/banner-food.jpg">
+        </div>
+        <div class="push p-l-3 text-bold text-white">
+                <h2>Bees' bar</h2>
+                <p>蜂蜜啤酒專家</p>
+                <a href="#" class="btn-black m-t-1">立即預約</a>
+        </div>
+    </div>
+
+<!--intro-->
+<div id="intro" class="p-2">
+    <h1 class="text-center">Bee's bar</h1>
+    <h2 class="text-center">喝的是態度　釀的是深度</h2>
+    <p class="text-center m-1">使用純麥芽釀造，充分發酵<br>釀出來的酒麥芽汁濃度高，<br>口感醇厚，香氣十足！</p>
+</div>
+
+<!--service-->
+    <div id="service">
+               
+        <div class="grid-flex">
+             <div class="grid-3">
+                <img src="images/service-food.jpg">
+                <div class="push-2">
+                     <h2 class="text-center">美食</h2>
+                    <p class="text-center">主廚研發的獨家菜色<br>烹調技術結合料理創意<br>你絕對不能錯過的美味</p>
+                </div>
+            </div>
+            <div class="grid-3">
+                <img src="images/service-beer.jpg">
+                <div class="push-2">
+                    <h2 class="text-center">啤酒</h2>
+                    <p class="text-center">採用台灣產蜂蜜釀造<br>蜂蜜的獨特風味<br>讓酒越喝越迷人</p>
+                </div>
+            </div>
+            <div class="grid-3">
+                <img src="images/service-drinking.jpg">
+                <div class="push-2">
+                    <h2 class="text-center">好朋友</h2>
+                    <p class="text-center">提供多人座位與包廂<br>三五好友聚餐放鬆的最佳選擇</p>
+                </div>
+            </div>
+        </div>
+        <div class="grid-1 p-5">
+            <h2 class="text-center">一群好朋友　幾杯好啤酒</h2>
+            <p class="text-center m-1">把握每一個相聚時刻</p>
+        </div>
+    </div>
+<!--logo-->
+<div id="logo" class="grid-1 p-2">
+    <img src="images/LOGO/logo-beesbar-big(300.300).jpg">
+    <p class="text-center m-t-1">台北市敦化北路五段1000號</p>
+    <p class="text-center">(02)8765-4321</p>
+</div>
+<!--footer-->
+    <div id="footer" class="grid-1 p-3">
+        <p class="text-center text-white">喝酒不開車<br>未滿18歲請勿飲酒</p>
+    </div>
+</body>
+
+</html>
+
+<script>
+    let btn = document.getElementById("hamburger");
+    let nav = document.getElementsByTagName("nav")[0];
+    let hT = document.getElementsByClassName("hamT")[0].style;
+    let hB = document.getElementsByClassName("hamB")[0].style;
+    let hM1 = document.getElementsByClassName("hamM")[0].style;
+    let hM2 = document.getElementsByClassName("hamM")[1].style;
+    btn.addEventListener('click',function(){
+        if(nav.style.display == "none" || nav.style.display == "") {
+          nav.style.display = "block";
+          hT.display = "none";
+          hB.display = "none";
+          hM1.transform = "rotate(30deg)";
+          hM2.transform = "rotate(-30deg)";
+          } else {
+            nav.style.display = "none";
+            hT.display = "block";
+            hB.display = "block";
+            hM1.transform = "rotate(0deg)";
+            hM2.transform = "rotate(0deg)";
+        }
+    })
+</script>

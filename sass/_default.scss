@@ -1,0 +1,84 @@
+@for $i from 1 through 10 {
+    .p-#{$i}{
+        padding: calc(1em * #{$i})!important;
+    }
+}
+@for $i from 1 through 10 {
+    .p-l-#{$i}{
+        padding-left: calc(1em * #{$i})!important;
+    }
+}
+@for $i from 1 through 10 {
+    .p-r-#{$i}{
+        padding-right: calc(1em * #{$i})!important;
+    }
+}
+@for $i from 1 through 10 {
+    .p-t-#{$i}{
+        padding-top: calc(1em * #{$i})!important;
+    }
+}
+@for $i from 1 through 10 {
+    .p-b-#{$i}{
+        padding-bottom: calc(1em * #{$i})!important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .m-#{$i}{
+        margin: calc(1em * #{$i})!important;
+    }
+}
+@for $i from 1 through 10 {
+    .m-t-#{$i}{
+        margin-top: calc(1em * #{$i})!important;
+    }
+}
+@for $i from 1 through 10 {
+    .m-l-#{$i}{
+        margin-left: calc(1em * #{$i})!important;
+    }
+}
+@for $i from 1 through 10 {
+    .m-r-#{$i}{
+        margin-right: calc(1em * #{$i})!important;
+    }
+}
+@for $i from 1 through 10 {
+    .m-b-#{$i}{
+        margin-bottom: calc(1em * #{$i})!important;
+    }
+}
+
+$colors: lightblue, lightgreen, lightpink, lightyellow, darkblue, darkorange , darkgoldenrod, darkgreen , darkred , black , white;
+@each $color in $colors {
+    .text-#{$color}{
+        color: $color;
+    }    
+}
+@each $color in $colors {
+    .bg-#{$color}{
+        background-color: $color!important;
+    }
+    
+}
+$weights: thin ,bold;
+$aligns: center ,right , left;
+@each $align in $aligns {
+    .text-#{$align}{
+        text-align: $align;
+    }
+}
+@each $weight in $weights{
+    .text-#{$weight}{
+        font-weight: $weight!important;
+    }
+}
+.float{
+    float: left;
+}
+.clear::after{
+    content: '';
+    display: block;
+    clear: both;
+}

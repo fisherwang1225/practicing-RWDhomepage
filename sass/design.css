@@ -1,0 +1,86 @@
+/*color: #603813, #e5cdac, #fbb03b*/
+
+/*slide*/
+html h1{
+    font-size: 52px;
+    text-shadow: 3px 3px 3px #000;
+}
+
+html h2{
+    font-size: 36px;
+    color:#fff;
+    text-shadow: 3px 3px 3px #000;
+}
+
+html p{
+    font-size: 20px;
+}
+
+/*intro*/
+#intro{
+    background-color: #603813;
+    color: #FFF;
+}
+
+
+/*slide theme*/
+#theme{
+    position: relative;
+    font-size: 2.5vw;
+}
+#theme .push{
+    position: absolute;
+    top: calc(100% /2 + 2em);
+    z-index: 30;
+    text-shadow: 1px 1px 1px #000;
+}
+#theme *[class^=btn]{
+    font-size: 1em;
+}
+
+/*LOGO*/
+#logo{
+    width: 100%; 
+    background-color: #fbb03b;
+}
+
+#logo img{
+    display: block; margin: auto;
+}
+
+/*service*/
+#service{
+    background-color: #e5cdac;
+    color: #603813;
+}
+#service .grid-flex .grid-3{
+    height: calc(100%);
+    position: relative;
+}
+#service .grid-flex .grid-3 .push-2{
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    color: transparent;
+    padding-top: calc((100vw / 3) / 2);
+    background-color: rgba(0,0,0,0);
+    position: absolute;
+    top: 0;
+}
+#service .grid-flex .grid-3 img{
+    width: 100%;
+}
+#service .grid-flex .grid-3:hover .push-2{
+    transition: all 500ms ease;
+    background-color: rgba(0,0,0,0.8);
+    color: #FFF;
+}
+#service .grid-flex .grid-3:hover img{
+    transition: all 500ms ease;
+    filter: blur(15px);
+}
+
+/*footer*/
+#footer{
+    background-color: #603813;
+}

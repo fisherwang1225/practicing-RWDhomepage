@@ -1,0 +1,55 @@
+#slide.slip,#slide.fade{
+    width: 100%;
+    height: calc(100vw / 16 * 9);
+    overflow: hidden;
+    position: relative;
+    img{
+        width: 100vw;
+        position: absolute;
+        transform: translate(100vw);
+        z-index: 0;
+        animation: sliding 25s ease infinite;
+    }
+    img:nth-of-type(2){
+        animation-delay: 5s;
+    }
+    img:nth-of-type(3){
+        animation-delay: 10s;
+    }
+}
+#slide.fade{
+    img{
+        opacity: 0;
+        transform: translate(0);
+        animation: fading 15s ease infinite;
+    }
+}
+
+@keyframes sliding{
+    4%{
+        transform: translate(0);
+        z-index: 10;
+    }
+    20%{
+        transform: translate(0);
+        z-index: 10;
+    }
+    24%{
+        transform: translate(-100vw);
+        z-index: 0;
+    }
+}
+@keyframes fading{
+    7%{
+        opacity: 1;
+        z-index: 10;
+    }
+    33%{
+        opacity: 1;
+        z-index: 10;
+    }
+    40%{
+        opacity: 0;
+        z-index: 0;
+    }
+}

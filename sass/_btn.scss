@@ -1,0 +1,25 @@
+$lightcolors: lightblue, lightgreen, lightpink, lightyellow, white;
+$darkcolors: darkblue, darkorange , darkgoldenrod, darkgreen , darkred , black ;
+*[class^=btn]{
+    display: inline-block;
+    padding: 0.6em 1em;
+    font-weight: 900;
+    filter: brightness(0.7);
+}
+*[class^=btn]:hover{
+    transition: all 500ms ease-in;
+    filter: brightness(1);
+}
+@each $light in $lightcolors {
+    .btn-#{$light}{
+        background-color: $light;
+        color: black;
+        border: 1px solid #888;
+    }
+}
+@each $dark in $darkcolors {
+    .btn-#{$dark}{
+        background-color: $dark;
+        color: white;
+    }
+}
